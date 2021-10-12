@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/naslovAlgoritma"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/opisKoraka"
+        android:layout_width="362dp"
+        android:layout_height="157dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/dugmeSljedeciKorak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/naslovAlgoritma"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/dugmeSljedeciKorak"
+        android:layout_width="173dp"
+        android:layout_height="45dp"
+        android:background="@color/pozadina"
+        android:text="Sljedeci"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/bijela"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="217dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/dugmePovratakNaDetalje"
+        android:layout_width="171dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/pozadina"
+        android:text="Nazad"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/bijela"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/dugmePrethodniKorak"
+        android:layout_width="162dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/pozadina"
+        android:text="Prethodni"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/bijela"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/dugmeSljedeciKorak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opisKoraka" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="355dp"
+        android:layout_height="180dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/dugmePovratakNaDetalje"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dugmeSljedeciKorak"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@id/vezaCF"
+            android:layout_width="3dp"
+            android:layout_height="50dp"
+            android:background="@drawable/veza_nova"
+            android:rotation="5"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/bijela"
+            tools:layout_editor_absoluteX="160dp"
+            tools:layout_editor_absoluteY="92dp" />
+
+
+        <TextView
+            android:id="@id/vezaCG"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:background="@drawable/veza_nova"
+            android:rotation="115"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/bijela"
+            tools:layout_editor_absoluteX="197dp"
+            tools:layout_editor_absoluteY="77dp" />
+
+
+        <TextView
+            android:id="@id/vezaAB"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:background="@drawable/veza_nova"
+            android:rotation="45"
+            android:text=""
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="33dp" />
+
+        <TextView
+            android:id="@id/vezaAC"
+            android:layout_width="3dp"
+            android:layout_height="70dp"
+            android:background="@drawable/veza_nova"
+            android:rotation="135"
+            android:text=""
+            tools:layout_editor_absoluteX="131dp"
+            tools:layout_editor_absoluteY="33dp" />
+
+        <TextView
+            android:id="@id/vezaEG"
+            android:layout_width="3dp"
+            android:layout_height="55dp"
+            android:background="@drawable/veza"
+            android:rotation="55"
+            android:text=""
+            tools:layout_editor_absoluteX="266dp"
+            tools:layout_editor_absoluteY="71dp" />
+
+
+        <TextView
+            android:id="@id/vezaCD"
+            android:layout_width="3dp"
+            android:layout_height="75dp"
+            android:background="@drawable/veza_nova"
+            android:rotation="49"
+            android:text=""
+            tools:layout_editor_absoluteX="197dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+
+        <TextView
+            android:id="@id/vezaFI"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:background="@drawable/veza_nova"
+            android:rotation="110"
+            android:text=""
+            tools:layout_editor_absoluteX="197dp"
+            tools:layout_editor_absoluteY="126dp" />
+
+        <TextView
+            android:id="@id/vezaBH"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:background="@drawable/veza_nova"
+            android:rotation="140"
+            android:text=""
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="92dp" />
+
+        <TextView
+            android:id="@id/vezaDE"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:background="@drawable/veza_nova"
+            android:rotation="130"
+            android:text=""
+            tools:layout_editor_absoluteX="266dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <TextView
+            android:id="@id/vezaHF"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:background="@drawable/veza"
+            android:rotation="85"
+            android:text=""
+            tools:layout_editor_absoluteX="128dp"
+            tools:layout_editor_absoluteY="121dp" />
+
+        <TextView
+            android:id="@id/vezaGJ"
+            android:layout_width="3dp"
+            android:layout_height="70dp"
+            android:background="@drawable/veza_nova"
+            android:rotation="105"
+            android:text=""
+            tools:layout_editor_absoluteX="277dp"
+            tools:layout_editor_absoluteY="95dp" />
+
+        <TextView
+            android:id="@+id/cvor1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cvor_novi"
+            android:text="A=0"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <TextView
+            android:id="@+id/cvor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cvor_novi"
+            android:text="B=1"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="78dp" />
+
+        <TextView
+            android:id="@+id/cvor3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cvor_novi"
+            android:text="C=3"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="78dp" />
+
+        <TextView
+            android:id="@+id/cvor4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cvor_novi"
+            android:text="D=15"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="226dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <TextView
+            android:id="@+id/cvor5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cvor_novi"
+            android:text="E=20"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="288dp"
+            tools:layout_editor_absoluteY="67dp" />
+
+        <TextView
+            android:id="@+id/cvor6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cvor_novi"
+            android:text="F=13"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="139dp" />
+
+        <TextView
+            android:id="@+id/cvor7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cvor_novi"
+            android:text="G=5"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="226dp"
+            tools:layout_editor_absoluteY="112dp" />
+
+        <TextView
+            android:id="@+id/cvor8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cvor_novi"
+            android:text="H=10"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="139dp" />
+
+        <TextView
+            android:id="@+id/cvor9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cvor_novi"
+            android:text="I=24"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="212dp"
+            tools:layout_editor_absoluteY="152dp" />
+
+        <TextView
+            android:id="@+id/cvor10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cvor_novi"
+            android:text="J=12"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="288dp"
+            tools:layout_editor_absoluteY="126dp" />
+
+        <TextView
+            android:id="@+id/tezina1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tezina"
+            android:text="1"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="44dp" />
+
+        <TextView
+            android:id="@+id/tezina2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tezina"
+            android:text="3"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="120dp"
+            tools:layout_editor_absoluteY="53dp" />
+
+        <TextView
+            android:id="@+id/tezina3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tezina"
+            android:text="12"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="187dp"
+            tools:layout_editor_absoluteY="46dp" />
+
+        <TextView
+            android:id="@+id/tezina4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tezina"
+            android:text="5"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="255dp"
+            tools:layout_editor_absoluteY="46dp" />
+
+        <TextView
+            android:id="@+id/tezina5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tezina"
+            android:text="9"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="112dp" />
+
+        <TextView
+            android:id="@+id/tezina6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tezina"
+            android:text="8"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="136dp" />
+
+        <TextView
+            android:id="@+id/tezina7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tezina"
+            android:text="10"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="108dp" />
+
+        <TextView
+            android:id="@+id/tezina8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tezina"
+            android:text="2"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="95dp" />
+
+        <TextView
+            android:id="@+id/tezina9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tezina"
+            android:text="11"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="183dp"
+            tools:layout_editor_absoluteY="146dp" />
+
+        <TextView
+            android:id="@+id/tezina10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tezina"
+            android:text="17"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="252dp"
+            tools:layout_editor_absoluteY="88dp" />
+
+        <TextView
+            android:id="@+id/tezina11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tezina"
+            android:text="7"
+            android:textAlignment="center"
+            android:textColor="@color/tekst"
+            tools:layout_editor_absoluteX="256dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="vezaAB" type="id" />
+    <item name="vezaAC" type="id" />
+    <item name="vezaBH" type="id" />
+    <item name="vezaCD" type="id" />
+    <item name="vezaDE" type="id" />
+    <item name="vezaEG" type="id" />
+    <item name="vezaHF" type="id" />
+    <item name="vezaCG" type="id" />
+    <item name="vezaCF" type="id" />
+    <item name="vezaFI" type="id" />
+    <item name="vezaGJ" type="id" />
+</resources>

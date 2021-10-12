@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">Algoritmi nad grafovima</string>
+
+    <string name="defDFS">Obilazak grafa predstavlja obilazak svih čvorova grafa po jednom. Čvorovi se posjećuju preko grana,
+                i posjete se realizuju kretanjem od početnog čvora pa u jednom pravcu, koliko god je to moguće. Nakon toga se prelazi na najbliži čvor koji ima neposjećenog susjeda.
+                Put koji dobijemo obilaskom grafa koristeći ovaj algoritam nije jedinstven, jer zavisi od redoslijeda
+                kojim ćemo odabrati susjede već posjećenih grafova. Efikasan je što se tiče potrošnje memorije i prilikom pretrage uskih, dugih grafova.
+                Nije optimalan,ali se najviše se koristi za ispitivanje povezanosti rubova.</string>
+    <string name="logikaDFS">Pretraga ovim algoritmom počinje od jednog početnog čvora, nakon čega se u jednom pravcu obilaze njegovi susjedi, koliko god je to moguće. Kada
+                obiđemo sve čvorove u tom pravcu vraćamo se na zadnji posječeni čvor koji ima neposjećenih
+                susjeda i odaberemo njega, te prelazimo na susjede tog susjeda i krećemo se u tom pravcu koliko god je to moguće.
+                Ovaj način posjete čvorova se ponavlja dok se ne posjete svi čvorovi grafa.</string>
+
+    <string name="DFSkorak1">Odabrati ćemo početni čvor A. Iz čvora A možemo do dva čvora B i C. Odabrati ćemo jedan od njih (moguće je odabrati bilo koji od njih) i dobiti prvu vezu A-B.</string>
+    <string name="DFSkorak2">U ovom algoritmu pratimo prethodno stanje, susjedne čvorove i dodaje nove susjedne čvorove. Novi čvorovi imaju prednost, jer je potrebno kreirati što veću dubinu konačnog stabla. Trenutni čvorovi koji mogu ući u konačno stablo su C iz prethodnog koraka i H. Nova veza nam je B-H.</string>
+    <string name="DFSkorak3">Novi susjedni čvor u ovom koraku je F, tako da on ulazi u konačno stablo i čini vezu H-F. Dok god novi čvorovi imaju slobodnih susjeda, koji se ne nalaze u konačnom stablu i oni će postati dio konačnog stabla.</string>
+    <string name="DFSkorak4">Iz čvora F možemo doći do novog čvora I, ali i do čvora C. Pošto je I novi čvor, biramo njega za novu vezu F-I.</string>
+    <string name="DFSkorak5">U ovom koraku nemamo novih susjeda, pa gledamo stare susjede. Dobili smo novu vezu F-C, jer čvoru C možemo pristupiti i iz čvora F.</string>
+    <string name="DFSkorak6">U ovom koraku dobili smo dva nova susjeda, tako da novi čvor u konačnom stablu može biti bilo koji od ta dva čvora. Mi ćemo odabrati vezu C-D.</string>
+    <string name="DFSkorak7">U ovom koraku imamo dva susjeda G i E, ali biramo čvor E,vezu D-E, jer nam je to novi čvor.</string>
+    <string name="DFSkorak8">Jedini susjed koji nam je ostao u ovom koraku je čvor G, tako da smo dobili novu vezu E-G.</string>
+    <string name="DFSkorak9">Preostao nam je čvor J, pa je zadnja veza G-J.</string>
+
+
+    <string name="defBFS">Za ovaj algoritam možemo reći da se posjećuju susjedi na istom nivou od početnog čvora, udaljenost od početnog
+                čvora možemo označiti sa d i kada posjetimo sve čvorove na toj udaljenosti prelazimo na d+1
+                udaljenost. Ovaj dio algoritma ponavljamo dok ne posjetimo sve čvorove u grafu.
+                Algoritam nije fikasan kada je potrošnja memorije u pitanju, koristiti se za široko struktuirane
+                grafove, koji nisu dugi. Optimalan je za pronalaženje najkraćeg puta, ali je potrebno dosta
+                memorije, pa nije isplativ za tu svrhu.</string>
+    <string name="logikaBFS">Obilazak grafa po širini također počinje od nekog zadanog čvora, koji uzimamo kao početni. Nakon toga posjećuju se svi njegovi
+                susjedi. Poslije toga prelazimo na jedan od posjećenih susjeda i posjećuju se svi njegovi susjedi. Algoritam terminira kada se
+                posjete susjedi svih susjeda.</string>
+
+    <string name="BFSkorak1">U slučaju primjene ovog algoritma biramo početni čvor A, nakon toga obilazimo sve njegove susjede, odnosno sve čvorove na dužini d=1. Na ovaj način smo obišli čvorove B i C.</string>
+    <string name="BFSkorak2">U slučaju primjene ovog algoritma biramo početni čvor A, nakon toga obilazimo sve njegove susjede, odnosno sve čvorove na dužini d=1. Na ovaj način smo obišli čvorove B i C.</string>
+    <string name="BFSkorak3">U drugom koraku uvećavamo dužinu d za 1, pa ona postaje d=2, i nakon toga obilazimo sve čvorove na dužini d=2. Odnosno obilazimo sve susjede čvorova koje smo obišli u prethodnom koraku. Ti čvorovi su H,F,G i D.</string>
+    <string name="BFSkorak4">U drugom koraku uvećavamo dužinu d za 1, pa ona postaje d=2, i nakon toga obilazimo sve čvorove na dužini d=2. Odnosno obilazimo sve susjede čvorova koje smo obišli u prethodnom koraku. Ti čvorovi su H,F,G i D.</string>
+    <string name="BFSkorak5">Opet uvećavamo d za 1, d postaje 3, pa ponovo obilazimo čvorove na toj dužini, odnosno susjede čvorova koje smo posjetili u prethodnom koraku. Ti čvorovi su I,J i E. Ovim korakom smo obišli sve čvorove grafa, pa algoritam terminira.</string>
+    <string name="BFSkorak6">Opet uvećavamo d za 1, d postaje 3, pa ponovo obilazimo čvorove na toj dužini, odnosno susjede čvorova koje smo posjetili u prethodnom koraku. Ti čvorovi su I,J i E. Ovim korakom smo obišli sve čvorove grafa, pa algoritam terminira.</string>
+
+
+    <string name="defKruskal">Kruskalov algoritam obuhvata sve čvorove jednog grafa sa dovoljnim brojem grana da povežu te čvorove, ali da ne čine ciklus.
+                Algoritam terminira kada se formira kostur od n-1 grana, gdje je n broj čvorova tog grafa. Ovaj algoritam je  pohlepni algoritam,
+                ne mora imati jedinstveno rješenje, jer se može desiti da više grana ima istu težinu. Još se naziva i naivni Kruskalov algoritam.
+                Pored toga što konačni kostur zaista tvori najmanje stablo postoji niz problema koje je potrebno riješiti u cijelom procesu pronalaska tog stabla.
+                A to su problem najefikasnije pretrage i odabir grane sa najmanjom težinom, a drugi je provjera da li odabrana grana formira ciklus sa prethodno odabranim granama.</string>
+    <string name="logikaKruskal">Konačno stablo se dobije tako što se uzima grana sa najmanjom težinom, nakon toga se ponavlja postupak uz to što svaka sljedeća grana ne smije
+                kreirati ciklus sa prethodno odabranim granama, tako da se to prvo provjeri, te se nakon toga grana dodaje u konačan kostur.
+                Algoritam terminira kada se formira kostur od n-1 grana, gdje je n broj čvorova tog grafa. Zbog provjera koje troše dosta vremena, algoritam je pohlepan.</string>
+
+    <string name="kruskalkorak1"> Algoritam počinje najlakšom granom A-B, pošto su oba čvora neobojena, bojimo ih sa jednom bojom, recimo crvenom. </string>
+    <string name="kruskalkorak2"> Sljedeća najlakša grana koja nije u konačnom stablu je C-G. Oba čvora su neobojena pa ih bojimo nekom bojom, ali ne smijemo obojiti iskorištenom bojom, pa uzimamo plavu boju. </string>
+    <string name="kruskalkorak3"> Sljedeća najlakša grana je A-C. Čvor A je crven, a čvor C je plav. Pošto su obojeni različitim bojama, uzimamo granu u konačno stablo i bojimo sve trenutno povezane čvorove u jednu od ove dvije boje. Mi ćemo uzeti crvenu boju. </string>
+    <string name="kruskalkorak4"> Sljedeća grana je D-E. Oba čvora su neobojena, pa ih bojimo slobodnom bojom, recimo plavom. </string>
+    <string name="kruskalkorak5"> Sljedeća slobodna, najlakša grana je G-J. Ćvor G je obojen u crveno, a J neobojen, to znači da možemo uzeti granu, i da čvor J bojimo u crveno. </string>
+    <string name="kruskalkorak6"> Sljedeća grana je H-F. Oba čvora su neobojena, tako da uzimamo granu i bojimo čvorove u slobodnu boju, zelenu. </string>
+    <string name="kruskalkorak7"> Sljedeća grana B-H. Čvor B je crven, a H zelen. Granu uzimamo u konačno stablo, i čvor H i sve čvorove povezane sa njim bojimo u crveno. </string>
+    <string name="kruskalkorak8"> Sljedeća grana je C-F. Oba čvora su obojena istom bojom, tako da ovu granu ne uzimamo. </string>
+    <string name="kruskalkorak9"> Sljedeća najlakša grana je F-I. Čvor I je neobojen, pa ga bojimo crvenom bojom i uzimamo granu. </string>
+    <string name="kruskalkorak10"> Sljedeća grana je C-D. Čvor C je obojen u crveno, a D u žuto. Granu uzimamo u konačno stablo, a sve čvorove bojimo crvenom bojom. Pošto u ovom trenutku imamo 9 grana i 10 čvorova u konačnom stablu što je n-1 grana kao što je i potrebno, algoritam terminira. </string>
+
+
+    <string name="defDijkstra">Najkraći put u grafu predstavlja određivanje najkraćeg puta od jednog odabranog čvora do svih ostalih čvorova tog grafa.
+                Dijkstrin algoritam svojim radom kreiraj kostur najkraćih puteva. Nastao je kao poboljšana verzija Dantzigovog algoritma,
+                te čini njegovu optimalniju i efikasniju verziju. U ovom algoritmu je uvedena vrijednost potencijala svakog čvora,
+                odnosno informacija o trenutnoj udaljenosti od početnog čvora. U konačni put uzimamo najmanji mogući potencijal za određeni čvor.
+                Algoritam terminira kada dođemo do traženog čvora ili kada posjetimo sve čvorove.</string>
+    <string name="logikaDijkstra">Rješavanje problema se svodi na pretragu grana oko trenutnog čvora i pronalazak najkraćeg puta do odredišnog čvora.
+                Dužina puta je zbir težina grana od početnog do tog čvora. Početni čvor će dobiti vrijednost potencijala 0,
+                a ostali čvorovi u zavisnosti od težine grana će mijenjati potencijale, jer se bira što manji potencijal.
+                Najmanji od trenutnih potencijala ulazi u konačni put pa taj čvor više ne posmatramo, a sa ostalih čvorova prelazimo na njihove susjede
+                i dodajemo na postojeći potencijal težinu grane kojom smo se kretali do tog sljedećeg čvora. Ukoliko je moguće sa novih čvorova doći do
+                već posječenog čvora i ukoliko je potencijal manji tim putem, uzimamo manji potencijal.</string>
+
+    <string name="dijkstrakorak1"> Početnom čvoru A dodjeljujemo potencijal 0, dok ostali čvorovi su bez potencijala. Nakon toga prelazimo na njegove susjede čvoru B potencijal 1, a čvoru C potencijal 3. Potencijal 1 je manji pa uzimamo granu A-B. </string>
+    <string name="dijkstrakorak2"> Dodjeljujemo potencijale susjedima prethodno dodanog čvora u konačni put. To je čvor H sa potencijalom 10. C ima manji potencijal, pa uzimamo A-C. </string>
+    <string name="dijkstrakorak3"> Susjedi čvora C u ovom koraku će dobiti sljedeće potencijale, čvor F potencijal 13, G potencijal 5 i D potencijal 15. Najmanji od trenutnih potencijala je 5 čvora G. </string>
+    <string name="dijkstrakorak4"> Susjedi čvora G će dobiti sljedeće potencijale, čvor E potencijal 22 i čvor J potencijal 12. Najmanji ponuđeni potencijal je 10 čvora H.</string>
+    <string name="dijkstrakorak5"> Susjed čvora H je čvor F koji već posjeduje potencijal 13. On sada može dobiti  potencijal 18, ali je 13 manji, pa nećemo mijenjati potencijal čvora F. Najmanji trenutni potencijal je 12 čvora J.</string>
+    <string name="dijkstrakorak6"> Čvor J nema susjeda, pa biramo od ponuđenih najmanji potencijal, a to je 13 čvora F. </string>
+    <string name="dijkstrakorak7"> Susjed čvora F je čvor I i dobiti će potencijal 24. Najmanji od ponuđenih potencijala je 15 čvora D.</string>
+    <string name="dijkstrakorak8"> Susjed čvora D, čvor E već ima potencijal 22. Novim putem on će dobiti manji potencijal 20. Sada je najmanji potencijal 20 čvora E.</string>
+    <string name="dijkstrakorak9"> Čvor E nema slobodnih susjeda, pa nam ostaje još potencijal 24 čvora I. Ovim korakom smo posjetili sve čvorove grafa i pronašli najkraći put do svakog čvora u grafu. </string>
+
+    <string name="title_activity_home_naslovna">HomeNaslovnaActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+</resources>
